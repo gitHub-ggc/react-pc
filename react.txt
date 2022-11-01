@@ -1,2 +1,14 @@
 react学习
-xxx
+1.使用脚手架： create-react-app
+
+可以全局安装脚手架 npm i create-react-app -g     create-reat-app 项目名
+也可以使用 npx 不用安装 npx create-react-app 项目名
+
+vue的项目配置文件修改：vue.config.js
+react的项目配置文件修改： 暴露配置文件 npm run eject
+
+vue 的主路口文件： main.js
+react 主入口文件 ： src 下的index.js
+
+jsx语法（js中编写html）
+		         
