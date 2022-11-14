@@ -1,14 +1,71 @@
 react学习
+第一节：语法
 1.使用脚手架： create-react-app
 
-可以全局安装脚手架 npm i create-react-app -g     create-reat-app 项目名
+可以全局安装脚手架 npm i create-react-app -g     create-react-app 项目名
 也可以使用 npx 不用安装 npx create-react-app 项目名
 
 vue的项目配置文件修改：vue.config.js
-react的项目配置文件修改： 暴露配置文件 npm run eject
+react的项目配置文件修改： 暴露配置文件 npm run eject 能运行的前提是git提交过
 
 vue 的主路口文件： main.js
 react 主入口文件 ： src 下的index.js
 
-jsx语法（js中编写html）
-		         
+jsx语法（js中编写html）：就是把html结构当做一种数据类型对待即可
+ 
+怎么在结构中使用变量？ {表达式} 类似于vue的{{表达式}}
+       不管是行内还是结构内的 都是{表达式}
+      但凡是想在结构中使用变量 那么就得使用{}
+
+类名：在react中 想使用类名 必须写成 className, 不能直接写成class， 因为它是关键字
+         多个类名不会自动合并，会替换
+行内样式：react中必须 style{} 烤串命名必须写成驼峰命名
+
+dangerouslySetInnerHTML={{__html:aa}} 等同于vue的v-html
+
+一般我们使用三元表达式来实现vue中的v-if功能，一般使用map来实现vue中的v-for功能
+
+在react中实现样式独立：文件名得写成  xxx.module.css,然后再去import导入，使用的时候再去打点实现
+
+react第二节: 组件
+React 组件分为两类  都是函数 使用的时候 首字母必须大写  函数式组件（静态组件） function声明的组件 hooks专门针对函数式组件做的
+类组件
+
+react数据更新
+setState()方法 ：把对象合并到state中 setState在大部分情况下是一个异步操作  可以在后面直接接一个箭头函数
+
+受控组件：表单的内容受当前组件的控制 <input type="text" value={name}><>
+非受控组件：表单的内容不受当前组件的控制 <input type="text" ></input>	
+
+ref操作的3种方式
+1. ref = 'xxx' this.refs.xx 已废弃
+2. ref = {el => this.xxx = el} this.xxx
+3. this.xxx = React.createRef()   ref={this.xxx}  this.xxx.current	    
+
+父子组件：
+	父组件传子：在父组件的字组件上一个变量，然后在大括号里面写上需要传的值，子组件就可以通过 this.props.变量 获取到那个值
+	子组件传父组件： 首先在父组件的子组件上加一个事件变量，然后在子组件代码里面加一个点击事件，再把
+钩子函数：   
+1.componentDidMount 加载后 ---相当于vue的mounted
+2.shouldComponentUpdate: 这个是优化性钩子函数，也可以用来控制当前组件是否触发rander更新
+3.继承 PureComponent: 纯组件 内部自己添加了shouldComponentUpdate,记住它只做一层比较
+   写法 class C2 extends React.PureComponent
+4.componentWillUnmount: 相当于vue的beforeUpdate 一般用于清除定时器什么的
+
+插槽：在react中设置插槽，其实就是父组件传一个带有HTML的函数给子组件，子组件直接接收后直接执行该函数即可
+         还有一种方法：就是在子组件写上  this.props.children,不过只能放一个位置
+
+高阶组件（HOC）：其实就是一个高阶函数，函数返回函数就是高阶函数，就是一个以参数为组价，返回值为新组件的函数
+
+状态提升：state 把本来属于组件的state提升到父组件，已达到提升组件的复用性
+
+
+
+
+
+
+
+
+
+
+
