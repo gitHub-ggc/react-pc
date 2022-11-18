@@ -1,0 +1,6 @@
+#layout{
+    height: 100vh;
+}
+#layout .ant-layout.ant-layout-has-sider{
+    height: 100%;
+}
