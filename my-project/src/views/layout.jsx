@@ -53,7 +53,7 @@ class MyLayout extends React.Component {
                                 minHeight: 360,
                             }}
                         >
-                            content
+                            content88
                             <MyRouter></MyRouter>
                         </div>
                     </Content>
