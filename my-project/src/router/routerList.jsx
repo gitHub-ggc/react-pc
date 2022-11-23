@@ -1,0 +1,42 @@
+import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+const routerList = [
+  {
+    key:'1',
+    title:'首页',
+    icon:MailOutlined,
+    path:'/introduce'
+  },
+  {
+    key:'2',
+    title:'描述',
+    icon:AppstoreOutlined,
+    children:[
+        {
+            key:'3',
+            title:'功能描述',
+            icon:SettingOutlined,
+            path:'/disboard'
+        }
+    ]
+  },   
+  {
+    key:'4',
+    title:'轮播',
+    icon:AppstoreOutlined,
+    children:[
+        {
+            key:'5',
+            title:'图片轮播',
+            icon:SettingOutlined,
+            path:'/swiper'
+        },
+        {
+            key:'6',
+            title:'图片轮播2',
+            icon:SettingOutlined,
+            path:'/swiper2'
+        },
+    ]
+  },  
+]
+export default routerList;

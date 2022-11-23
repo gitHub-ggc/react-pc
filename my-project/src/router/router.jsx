@@ -1,5 +1,5 @@
 import React from "react";
-import {HashRouter,Switch,BrowserRouter,Route,Redirect} from "react-router-dom"
+import {HashRouter,Switch,Route,Redirect} from "react-router-dom"
 
 import Disboard from "../views/disboard";
 import Introduce from "../views/introduce";

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import Router from './router';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 import { ConfigProvider} from 'antd';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文

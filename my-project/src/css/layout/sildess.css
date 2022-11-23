@@ -1,0 +1,29 @@
+.sidesId{
+    color:#fff;
+}
+.sidesId .ant-layout-sider{
+    height: 100%;
+}
+.sidesId h1{
+    color:#fff;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+}
+.sidesId .nav{
+    height: calc(100% -64px);
+}
+.nav ul{
+    height: 100%;
+    background: #000;
+    color:#fff;
+}
+.nav ul li .ant-menu-sub.ant-menu-inline{
+    background: #000;
+}
+.nav .link-name{
+    color:#fff;
+}
+.nav .ant-menu-item-selected .link-name{
+    color:#000;
+}
